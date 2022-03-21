@@ -1,44 +1,34 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import Form from './components/Form/Form'
+import ResetApp from './App.style'
+import styled from 'styled-components'
+import aside from './assets/aside-banner.png'
 
-function App() {
-  const [count, setCount] = useState(0)
+const AppStyle = styled.div `
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+display: flex;
+
+aside {
+ height: 100vh;
+ width: 585px;
+
+ img {
+   min-height: 100vh;
+ }
+}
+`
+function App () {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+    <ResetApp></ResetApp>
+    <AppStyle>
+      <aside>
+        <img src={aside} alt="" />
+      </aside>
+    <Form></Form>
+    </AppStyle>
+    </>
   )
 }
 

@@ -4,19 +4,28 @@ const User = require('./User')
 const Metrics = db.define('Metrics', {
   
   bpm: {
-    type: DataTypes.INTEGER
+    type: DataTypes.INTEGER,
+    required: true
   },
 
-  arterialPressure: {
-    type: DataTypes.INTEGER
+  arterialSystolic: {
+    type: DataTypes.INTEGER,
+    required: true
+  },
+
+  arterialDiastole: {
+    type: DataTypes.INTEGER,
+    required: true
   },
 
   meditionDay: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    required: true
   },
 
   meditionHour: {
-    type: DataTypes.TIME
+    type: DataTypes.TIME,
+    required: true
   }
 })
 
