@@ -35,7 +35,6 @@ function Form() {
 
   const handleMetricSubmit = (event) => {
     event.preventDefault()
-    console.log(metrics)
     Axios.post('http://localhost:3001/metrics', metrics)
   }
 
@@ -46,7 +45,6 @@ function Form() {
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-      console.log(inputs)
     Axios.post('http://localhost:3001/register', inputs)  
 	};
 
