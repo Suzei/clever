@@ -1,4 +1,3 @@
-# clever
 
 ## Clever
 
