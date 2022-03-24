@@ -1,7 +1,7 @@
 import Form from './components/Form/Form'
 import ResetApp from './App.style'
 import styled from 'styled-components'
-import aside from './assets/aside-banner.png'
+import aside from './assets/images/aside-banner.png'
 
 const AppStyle = styled.div `
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');

@@ -3,11 +3,13 @@ const db = require('../db/conn')
 
 const User = db.define('User', {
   name: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    allowNull: false
   },
 
   birthday: {
-    type: DataTypes.DATE
+    type: DataTypes.STRING,
+    allowNull: false
   }
 })
 

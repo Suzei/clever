@@ -19,7 +19,7 @@ const FormStyle = styled.div `
     gap: 23px;
     padding: 80px 100px 50px 30px ;
   
-    input[type=text] {
+    input[type=text], input[type=datetime] {
       width: 535px;
       height: 46px;
       border-radius: 6px;
@@ -50,13 +50,11 @@ const FormStyle = styled.div `
       font-weight: 500;
     }
 
-    label[for=meditionDay] { font-weight: 700; }
+    label[id=meditionDay] { font-weight: 700; align-self: flex-start }
 
     h2 { font-size: 28px; }
 
     p { font-size: 16px; }
-
-    input[placeholder] { color: #32323C80;}
   }
 `
 
@@ -90,6 +88,10 @@ export const FormHour = styled.div `
   align-items: center;
   align-self: center;
   gap: 18px;
+
+  #meditionDay {
+    align-self: flex-start;
+  }
   
   p {
     align-self: flex-start;
@@ -108,10 +110,53 @@ export const FormHour = styled.div `
     justify-content: center;
   }
 
+  .active {
+    background-color: #3962FC;
+    color: white;
+    font-weight: 600;
+  }
+
   .form__hours {
     display: flex;
     gap: 18px ;
   }
 `
 
+export const FormBPM = styled.div `
+  background-color: #FFFFFF;
+  border: 1px solid #E7F0FD;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  padding-top: 20px;
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px;
+
+
+    .form__image {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700 ;
+      color: #425466;
+    }
+
+    input {
+      border-radius: 6px;
+      border: none;
+      box-shadow: 1px 1px 3px black;
+      padding-left: 10px;
+    }
+  }
+`
 export default FormStyle

@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@radix-ui/react-popover": "0.1.6",
+    "@radix-ui/react-tabs": "^0.1.5",
     "axios": "^0.26.1"
   }
 }
